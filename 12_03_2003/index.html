@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Abil's Day</title>
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap');
+
+      #typepaper {
+         font-family: "Playwrite IN", serif!important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preload">
+      <p>Loading...</p>
+    </div>
+    <div class="open">
+      <div class="card">
+        <h2>Ada Pesan Buat Kamu</h2>
+        <img src="https://dekatutorial.github.io/brd/mail.webp" class="mail" />
+        <h2>Tekan Untuk Membuka</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content1">
+        <div>
+          <h2>Happy Birthday</h2>
+          <h1>Syifa Sabilla</h1>
+        </div>
+        <button id="klikaku">Klik ini Cantik</button>
+      </div>
+      <div class="content2">
+        <div class="paper-container">
+          <button id="wa">Kirim Pesan</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Edit yang didalam tanda kutip
+
+      nama = `Ciee Ultahhh`;
+
+      foto = [`img1.png`];
+
+      ucapan = `Apa semua yang kamu rencanakan berjalan sesuai harapan? apa semuanya lancar? semoga saja jawabannya "iya", kalaupun "tidak" jangan takut, karena apa yang udh kamu lakuin sekarang ini adalah jalan menuju bahagia di hari selanjutnya. Sekarang istirahat dulu ya, lepaskan segala hal yang membebankan pikiran mu. Maafkan segala yang melukai perasaan, rehatlah. Bahkan batu karang pun hancur di terjang ombak, tetapi berlianmu abadi di tiap patahan
+
+Makasih udah bertahan sejauh ini! seneng bangeet bisaa kenal samaa kamu, maaf ya masih bikin kamu marah, tapi sebenernya bersyukur banget udah kenal kamu, makasih banyak ya sekalii lagi.
+
+bit.ly/40GUE2f`;
+
+      // Nomor whatsapp diawali 62
+      noWhatsapp = `6283896772655`;
+
+      musik = `Kunto Aji - Rehat.mp3`;
+
+      var swalo = Swal.mixin({ allowOutsideClick: false, confirmButtonText: "OK" });
+      async function kirimPesannn() {
+        var { value: pesan } = await swalo.fire({ title: "Tulis pesan", input: "textarea", confirmButtonText: "Kirim" });
+        if (pesan) {
+          await swalo.fire({ confirmButtonText: "iya iya", title: "Kirim pesannya ke wa aku ya janji hehe" });
+          location.assign(`https://wa.me/${noWhatsapp}?text=${pesan}`);
+        } else {
+          await swalo.fire({ confirmButtonText: "iya iya", title: "jangan kosong ya cantikkk" });
+          kirimPesannn();
+        }
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
