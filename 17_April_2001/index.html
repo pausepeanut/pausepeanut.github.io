@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>🩷Ultah Adek Najwah🩷</title>
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap');
+
+      #typepaper {
+         font-family: "Playwrite IN", serif!important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preload">
+      <p>Loading...</p>
+    </div>
+    <div class="open">
+      <div class="card">
+        <h2>Pesan Khusus Habibati</h2>
+        <img src="https://dekatutorial.github.io/brd/mail.webp" class="mail" />
+        <h2>Bacanya pelan-pelan yaa</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content1">
+        <div>
+          <h2>Barakallah fii Umrik</h2>
+          <h1>Adek Najwah Rokan</h1>
+        </div>
+        <button id="klikaku">Klik iniii</button>
+      </div>
+      <div class="content2">
+        <div class="paper-container">
+          <button id="wa">Kirim Pesan</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Edit yang didalam tanda kutip
+
+      nama = `Ciee Ultahhh`;
+
+      foto = [`img1.png`];
+
+      ucapan = `السلام عليكم ورحمة الله وبركاته
+
+بارك الله في عمرك 🌸 Semoga di usia yang semakin dewasa ini, Allah senantiasa melimpahkan rahmat, keberkahan, dan kebaikan yang tak terhingga dalam setiap langkah hidup. Semoga setiap detik yang di jalani bernilai ibadah, setiap ujian yang datang menjadi penguat iman, dan setiap doa yang di panjatkan di ijabah oleh Allah dengan cara terbaik.
+
+Di usia ini, semoga semakin di kuatkan hatinya, di lapangkan dadanya, dan di berikan kesabaran dalam menghadapi segala hal yang belum sesuai harapan. Semoga Allah selalu menjaga langkahmu, memperindah akhlakmu, serta menjadikanmu muslimah yang tidak hanya cantik secara lahir, tetapi juga indah dalam iman dan taqwa.
+
+Semoga segala impian baikmu dipermudah jalannya, rezekimu diluaskan dan diberkahi, serta dipertemukan dengan orang-orang yang tulus dan membawa kebaikan dalam hidupmu. Jika saat ini masih ada doa yang belum terwujud, semoga Allah menggantinya dengan sesuatu yang jauh lebih baik di waktu yang paling tepat.
+
+Tetaplah menjadi pribadi yang kuat namun lembut, sabar namun tegar, dan rendah hati dalam setiap pencapaian. Semoga langkahmu selalu dalam lindungan-Nya, dan semoga hidupmu dipenuhi dengan kebahagiaan yang sederhana namun penuh makna, baik di dunia maupun di akhirat 🤍
+
+اللهم بارك في عمرها، واغفر لها، وارزقها صحةً وعافية، واجعلها من عبادك الصَالِحَة، وحقق لها كل ما تتمناه إن كان خيرًا لها في الدنيا والآخرة
+
+السلام عليكم والله عليكم`;
+
+      // Nomor whatsapp diawali 62
+      noWhatsapp = `6283896772655`;
+
+      musik = `Sal Priadi - Serta Mulia.mp3`;
+
+      var swalo = Swal.mixin({ allowOutsideClick: false, confirmButtonText: "OK" });
+      async function kirimPesannn() {
+        var { value: pesan } = await swalo.fire({ title: "Tulis pesan", input: "textarea", confirmButtonText: "Kirim" });
+        if (pesan) {
+          await swalo.fire({ confirmButtonText: "iya iya", title: "Kirim pesan ka wa we hehe" });
+          location.assign(`https://wa.me/${noWhatsapp}?text=${pesan}`);
+        } else {
+          await swalo.fire({ confirmButtonText: "iya iya", title: "Ulah kosong cantikkk" });
+          kirimPesannn();
+        }
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
